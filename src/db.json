@@ -1,0 +1,116 @@
+[
+  {
+    "id": 42,
+    "title": "Lixeira",
+    "price": 30.0,
+    "image": "https://m.media-amazon.com/images/I/41J5QE1MBoL._AC_SL1000_.jpg"
+  },
+  {
+    "id": 49,
+    "title": "Escorredor de louça",
+    "price": 30.0,
+    "image": "https://m.media-amazon.com/images/I/71OWsUgr+eL._AC_SL1500_.jpg"
+  },
+  {
+    "id": 43,
+    "title": "Jarra ",
+    "price": 33.0,
+    "image": "https://m.media-amazon.com/images/I/71hBZBOiCeL._AC_SL1500_.jpg"
+  },
+  {
+    "id": 44,
+    "title": "Cesto de roupa",
+    "price": 43.0,
+    "image": "https://m.media-amazon.com/images/I/41Lw0S7BOdL._AC_.jpg"
+  },
+  {
+    "id": 45,
+    "title": "Tapete banheiro",
+    "price": 35,
+    "image": "https://m.media-amazon.com/images/I/71rDmEJ8QuL._AC_SL1200_.jpg"
+  },
+  {
+    "id": 46,
+    "title": "Assadeira",
+    "price": 11.99,
+    "image": "https://m.magazineluiza.com.br/a-static/420x420/conjunto-2-assadeiras-quadradas-11l-marinex/casa-e-video/19480/9e651deb8d9e0f68f8e5c7c25f3663e8.jpeg"
+  },
+  {
+    "id": 47,
+    "title": "Copos",
+    "price": 42,
+    "image": "https://m.magazineluiza.com.br/a-static/420x420/jogo-de-copos-de-vidro-430ml-6-pecas-haus-concept-canelado/magazineluiza/238950300/963a2abb83c3cfe423b4161be70e3a4b.jpg"
+  },
+  {
+    "id": 48,
+    "title": "Travesseiro",
+    "price": 43,
+    "image": "https://m.magazineluiza.com.br/a-static/420x420/kit-travesseiro-ortobom-de-cabeca-poliester-napoles-2-unidades/magazineluiza/229556100/f18b2eaa851707eb60935a9db0cf0f02.jpg"
+  },
+  {
+    "id": 50,
+    "title": "Conjunto colher silicone",
+    "price": 39,
+    "image": "https://m.media-amazon.com/images/I/51RDO+bHUiL._AC_SL1000_.jpg"
+  },
+  {
+    "id": 70,
+    "title": "Marinex",
+    "price": 50,
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_985069-MLA99586816098_122025-F.webp"
+  },
+  {
+    "id": 71,
+    "title": "Toalha",
+    "price": 80,
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_976038-MLA96261478404_102025-F.webp"
+  },
+  {
+    "id": 72,
+    "title": "Talheres",
+    "price": 75,
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_631571-MLA100043972823_122025-F.webp"
+  },
+  {
+    "id": 51,
+    "title": "Jogo de cama",
+    "price": 20,
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_978813-MLA96242376076_102025-F.webp"
+  },
+  {
+    "id": 52,
+    "title": "Kit banheiro",
+    "price": 84,
+    "image": "https://http2.mlstatic.com/D_NQ_NP_2X_715808-MLB90413994089_082025-F-kit-conjunto-banheiro-6-pecas-lixeira-tampa-bambu-fechada.webp"
+  },
+  {
+    "id": 53,
+    "title": "Potes",
+    "price": 84,
+    "image": "https://m.magazineluiza.com.br/a-static/420x420/jogo-de-potes-de-vidro-hermetico-brinox-com-tampa-redondo-ekko-7-pecas/magazineluiza/238409400/bca13663252802a25f76919eb39b560e.jpg"
+  },
+  {
+    "id": 54,
+    "title": "Pratos",
+    "price": 115,
+    "image": "https://m.media-amazon.com/images/I/51cFMEomVQL._AC_SL1500_.jpg"
+  },
+  {
+    "id": 55,
+    "title": "Air Fryer",
+    "price": 250,
+    "image": "https://m.magazineluiza.com.br/a-static/420x420/air-fryer-mondial-family-afn-40-bi-preto-4l-com-timer/magazineluiza/228887100/f030da645341f959c0139572c8741134.jpg"
+  },
+  {
+    "id": 56,
+    "title": "Panela de pressão eletrica",
+    "price": 385,
+    "image": "https://m.magazineluiza.com.br/a-static/420x420/panela-de-pressao-eletrica-digital-mondial-5l-900w-digital-master-cooker-pe-38/magazineluiza/236680400/7b4d7c601ba9dab8b092fc417f42153a.jpg"
+  },
+  {
+    "id": 57,
+    "title": "Panelas de ceramicas ",
+    "price": 395,
+    "image": "https://m.media-amazon.com/images/I/41vLN82-hsL._AC_SL1000_.jpg"
+  }
+]
