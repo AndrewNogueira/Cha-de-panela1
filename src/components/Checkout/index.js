@@ -5,7 +5,7 @@ import { nanoid } from 'nanoid';
 
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import TextField from '@material-material-ui/core/TextField';
+import TextField from '@material-ui/core/TextField';
 import QRCodeLib from 'qrcode'; // <-- NOVO
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { FaCopy, FaCheckCircle } from 'react-icons/fa';
