@@ -5,8 +5,8 @@ import { nanoid } from 'nanoid';
 
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import TextField from '@material-ui/core/TextField';
-import QRCode from 'react-qr-code';
+import TextField from '@material-material-ui/core/TextField';
+import QRCodeLib from 'qrcode'; // <-- NOVO
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { FaCopy, FaCheckCircle } from 'react-icons/fa';
 import * as CartActions from '../../store/modules/cart/actions';
@@ -22,10 +22,12 @@ function Checkout({ total, setStep, cart }) {
   const [phone, setPhone] = useState('');
   const [msg, setMsg] = useState('');
   const [pixString, setPixString] = useState('');
+  const [qrImage, setQrImage] = useState(''); // <-- NOVO
   const [copied, setCopied] = useState(false);
 
   function handleSubmit(e) {
     e.preventDefault();
+
     const id = `CHA-${nanoid(4).toUpperCase()}`;
     const pix = new Pix(
       process.env.REACT_APP_PIX_KEY,
@@ -35,36 +37,29 @@ function Checkout({ total, setStep, cart }) {
       id,
       total
     );
-    setPixString(pix.getPayload());
+
+    const payload = pix.getPayload();
+    setPixString(payload);
+
+    // 🔵 GERAR QR CODE PNG COMPATÍVEL COM TODOS OS BANCOS
+    QRCodeLib.toDataURL(payload, { margin: 1, scale: 6 }, (err, url) => {
+      if (!err) setQrImage(url);
+    });
+
+    // Salvar dados no Google Sheets
     let items = '';
     cart.forEach((item) => {
-      const output = `${item.amount}x ${item.title}; `;
-      items += output;
+      items += `${item.amount}x ${item.title}; `;
     });
+
     const logPayment = `https://script.google.com/macros/s/AKfycbwO6mXURJZkqItBnuSyg9rzphlFNH6AevDhudd5bL56mCzDa6x8Qrom/exec?name=${name}&id=${id}&valor=${formatBRL(
       total
     )}&msg=${msg}&telefone=${phone}&items=${items}`;
+
     const xmlHttp = new XMLHttpRequest();
     xmlHttp.open('GET', logPayment, true);
     xmlHttp.send(null);
   }
-
-  const handleNameChange = (event) => {
-    setName(event.target.value);
-  };
-  const handlePhoneChange = (event) => {
-    setPhone(event.target.value);
-  };
-  const handleMsgChange = (event) => {
-    setMsg(event.target.value);
-  };
-
-  const handleCopyQR = () => {
-    setTimeout(() => {
-      setCopied(false);
-    }, 1 * 1000);
-    setCopied(true);
-  };
 
   return (
     <Container>
@@ -76,6 +71,7 @@ function Checkout({ total, setStep, cart }) {
             </Typography>
             <form onSubmit={handleSubmit}>
               <Grid container spacing={3}>
+                
                 <Grid item xs={12} md={6}>
                   <TextField
                     required
@@ -84,9 +80,10 @@ function Checkout({ total, setStep, cart }) {
                     fullWidth
                     autoComplete="given-name"
                     value={name}
-                    onChange={handleNameChange}
+                    onChange={(e) => setName(e.target.value)}
                   />
                 </Grid>
+
                 <Grid item xs={12} md={6}>
                   <TextField
                     required
@@ -95,33 +92,36 @@ function Checkout({ total, setStep, cart }) {
                     fullWidth
                     autoComplete="tel"
                     value={phone}
-                    onChange={handlePhoneChange}
+                    onChange={(e) => setPhone(e.target.value)}
                   />
                 </Grid>
+
                 <Grid item xs={12} md={12}>
                   <TextField
                     id="msg"
                     label="Mensagem"
-                    helperText={`Deixe aqui uma pequena mensagem para os futuros casados :) - ${msg.length}/40`}
+                    helperText={`Deixe uma mensagem :) - ${msg.length}/40`}
                     fullWidth
                     value={msg}
                     inputProps={{ maxLength: 40 }}
-                    onChange={handleMsgChange}
+                    onChange={(e) => setMsg(e.target.value)}
                   />
                 </Grid>
               </Grid>
+
               <footer>
                 <Total>
                   <span>TOTAL</span>
                   <strong>{formatBRL(total)}</strong>
                 </Total>
+
                 <div className="checkout-buttons">
                   <ButtonSecondary
                     text="Voltar"
                     type="button"
                     onClick={() => setStep(0)}
                   />
-                  <ButtonPrimary text="próximo passo" type="submit" />
+                  <ButtonPrimary text="Próximo passo" type="submit" />
                 </div>
               </footer>
             </form>
@@ -129,8 +129,20 @@ function Checkout({ total, setStep, cart }) {
         ) : (
           <SuccessContent>
             <h2>Muito obrigado pelo presente, {name}!</h2>
-            <QRCode value={pixString} />
-            <CopyToClipboard text={pixString} onCopy={handleCopyQR}>
+
+            {/* QR CODE PNG */}
+            {qrImage && (
+              <img
+                src={qrImage}
+                alt="QR Code Pix"
+                style={{ width: 220, height: 220 }}
+              />
+            )}
+
+            <CopyToClipboard text={pixString} onCopy={() => {
+              setCopied(true);
+              setTimeout(() => setCopied(false), 1000);
+            }}>
               <button className="copy-button" type="button">
                 {copied ? (
                   <>
@@ -139,18 +151,19 @@ function Checkout({ total, setStep, cart }) {
                   </>
                 ) : (
                   <>
-                    <span>Copiar código QR</span>
+                    <span>Copiar código Pix</span>
                     <FaCopy size={18} />
                   </>
                 )}
               </button>
             </CopyToClipboard>
+
             <span>
-              Para finalizar, basta realizar o pagamento escaneando ou colando o
-              código Pix acima :)
+              Para finalizar, basta escanear ou colar o código Pix acima :)
             </span>
+
             <p>
-              Caso alguma coisa de errado, minha chave pix é{' '}
+              Caso algo dê errado, minha chave é:{' '}
               <strong>{process.env.REACT_APP_PIX_KEY}</strong>
             </p>
           </SuccessContent>
