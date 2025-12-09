@@ -35,11 +35,6 @@ function Greeting() {
         <section className="text-wrapper">
           {/* <h2>AVISO</h2> */}
           <p>
-            Nada nos deixaria mais felizes do que compartilhar com todos vocês o
-            momento da nossa união! Mas nem sempre a vida permite que nossos
-            planos aconteçam como sonhamos.
-          </p>          
-          <p>
             Hoje, estamos construindo uma nova fase lado a lado, com muito amor, cuidado e fé. 
             O chá de panela é mais um passo nessa caminhada linda que estamos vivendo  e estamos muito felizes em compartilhar esse momento com vocês.
           </p>
