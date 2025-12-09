@@ -30,7 +30,11 @@ function Products({ amount, addToCartRequest }) {
     <>
       <Panel
         title="CASA NOVA"
-        text="Ficaremos muito felizes com a contribuição de vocês para montar o nosso lar :)"
+        text="Ficaremos muito felizes com seu carinho no nosso chá de panela!
+              Você pode levar o presente físico no dia do evento. Os itens listados abaixo são apenas referências para quem optar por essa opção.
+              Mas, se preferir, também pode comprar diretamente pelo nosso site.
+              Todos os itens seguem nossa paleta de cores: cinza, preto, branco e madeira.
+              Obrigada por fazer parte desse momento tão especial! 🖤✨"
       />
       <ProductList>
         {products &&
