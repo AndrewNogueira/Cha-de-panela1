@@ -40,8 +40,8 @@ function Greeting() {
             planos aconteçam como sonhamos.
           </p>          
           <p>
-            Obrigado por reservar o seu tempo e nos dar o seu carinho. Iremos
-            lembrar para sempre deste momento tão esperado.
+            Hoje, estamos construindo uma nova fase lado a lado, com muito amor, cuidado e fé. 
+            O chá de panela é mais um passo nessa caminhada linda que estamos vivendo  e estamos muito felizes em compartilhar esse momento com vocês.
           </p>
           <FancySvg />
         </section>
