@@ -27,19 +27,35 @@ export default createGlobalStyle`
     margin-top: 100px;
   }
 
-  :root {
-    --coupleName: #222222;
-    --menu: #222222;
-    --content: #666666;
-    --title-text-color: #222222;
-    --main: #222222;
-    --body: #fff;
-    --formBorder: #e0e0e0;
-    --lightBackground: #f9f9f9;
-    --darkBackground: #222222;
+    :root {
+    /* MARROM */
+    --marrom-escuro: #4E342E;
+    --marrom-medio: #795548;
+    --marrom-claro: #A1887F;
+
+    /* BEGE */
+    --bege-claro: #F5F0E6;
+    --bege-medio: #E6D5B8;
+    --bege-quente: #D7C4A3;
+
+    /* BRANCO */
+    --branco: #FFFFFF;
+
+    /* MAPEAMENTO PARA O SISTEMA ATUAL DO SITE */
+    --coupleName: var(--marrom-escuro);
+    --menu: var(--marrom-escuro);
+    --content: var(--marrom-medio);
+    --title-text-color: var(--marrom-escuro);
+    --main: var(--marrom-escuro);
+    --body: var(--branco);
+    --formBorder: var(--bege-medio);
+    --lightBackground: var(--bege-claro);
+    --darkBackground: var(--marrom-escuro);
     --transparentBackground: rgba(0,0,0,0);
     --alert: #ef5350;
     --error: #ef5350;
+
+    /* FONTES (mantidas) */
     --base-font-family: "poppins-light";
     --menu-font-family: "BarlowCondensed";
     --title-font-family: "BarlowCondensed";
