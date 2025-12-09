@@ -14,6 +14,7 @@
     "immer": "^6.0.3",
     "nanoid": "^3.1.20",
     "polished": "^3.5.2",
+    "qrcode": "^1.5.4",
     "react": "^16.13.1",
     "react-copy-to-clipboard": "^5.0.3",
     "react-dom": "^16.13.1",
@@ -32,13 +33,10 @@
     "styled-components": "^5.1.0"
   },
   "scripts": {
-    "build": "react-scripts --openssl-legacy-provider build",
     "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  },
-  "engines": {
-    "node": "24.x"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -55,5 +53,7 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
 }
