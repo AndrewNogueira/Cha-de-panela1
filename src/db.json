@@ -112,5 +112,59 @@
     "title": "Panelas de ceramicas ",
     "price": 395,
     "image": "https://m.media-amazon.com/images/I/41vLN82-hsL._AC_SL1000_.jpg"
+  },
+ {
+    "id": 58,
+    "title": "Rack + Painel",
+    "price": 510,
+    "image": "https://m.media-amazon.com/images/I/71vi1L5zpmL._AC_SL1000_.jpg"
+  },
+  {
+    "id": 59,
+    "title": "Micro-ondas ",
+    "price": 537.20,
+    "image": "https://m.magazineluiza.com.br/a-static/420x420/micro-ondas-pmo23bb-20-litros-1100w-com-prato-philco/carrefouroficial/900004718/1fd78cd67899fef2d009101bbb86b342.jpeg"
+  },
+  {
+    "id": 60,
+    "title": "Fogão 4 bocas ",
+    "price": 755,
+    "image": "https://m.media-amazon.com/images/I/41YgCf7hn0L._AC_SL1000_.jpg"
+  },
+  {
+    "id": 61,
+    "title": "Guarda- Roupa",
+    "price": 852,
+    "image": "https://imgs.casasbahia.com.br/1565187788/1xg.jpg?imwidth=500"
+  },
+  {
+    "id": 62,
+    "title": "Sofá",
+    "price": 885,
+    "image": "https://imgs.casasbahia.com.br/1565210729/1xg.jpg?imwidth=500"
+  },
+  {
+    "id": 63,
+    "title": "Cama box casal",
+    "price": 999,
+    "image": "https://imgs.casasbahia.com.br/1001337732/1g.jpg?imwidth=500"
+  },
+  {
+    "id": 64,
+    "title": "Televisão",
+    "price": 1430,
+    "image": "https://m.magazineluiza.com.br/a-static/420x420/smart-tv-43-full-hd-dled-aoc-43s5045-78g-va-wi-fi-3-hdmi-1-usb/magazineluiza/238637200/99421c5b068c20d7b69dd5c341ea4318.jpg"
+  },
+  {
+    "id": 65,
+    "title": "Maquina de lavar",
+    "price": 1555,
+    "image": "https://m.magazineluiza.com.br/a-static/420x420/maquina-de-lavar-electrolux-11kg-branca-essential-care-com-easy-clean-e-filtro-fiapos-les11/electrolux/2004293/4c90a731bde0dbd327cc3d96ead3a49e.jpeg"
+  },
+  {
+    "id": 66,
+    "title": "Geladeira",
+    "price": 3000,
+    "image": "https://imgs.casasbahia.com.br/12731681/1g.jpg?imwidth=500"
   }
 ]
